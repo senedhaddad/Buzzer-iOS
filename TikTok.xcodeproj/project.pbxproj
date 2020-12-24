@@ -10,7 +10,6 @@
 		83B8AC132594DBF3002347F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC122594DBF3002347F0 /* AppDelegate.swift */; };
 		83B8AC152594DBF3002347F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC142594DBF3002347F0 /* SceneDelegate.swift */; };
 		83B8AC172594DBF3002347F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC162594DBF3002347F0 /* ViewController.swift */; };
-		83B8AC1A2594DBF3002347F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B8AC182594DBF3002347F0 /* Main.storyboard */; };
 		83B8AC1C2594DBF4002347F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B8AC1B2594DBF4002347F0 /* Assets.xcassets */; };
 		83B8AC1F2594DBF4002347F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B8AC1D2594DBF4002347F0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		83B8AC122594DBF3002347F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B8AC142594DBF3002347F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		83B8AC162594DBF3002347F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		83B8AC192594DBF3002347F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83B8AC1B2594DBF4002347F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83B8AC1E2594DBF4002347F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83B8AC202594DBF4002347F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 				83B8AC122594DBF3002347F0 /* AppDelegate.swift */,
 				83B8AC142594DBF3002347F0 /* SceneDelegate.swift */,
 				83B8AC162594DBF3002347F0 /* ViewController.swift */,
-				83B8AC182594DBF3002347F0 /* Main.storyboard */,
 				83B8AC1B2594DBF4002347F0 /* Assets.xcassets */,
 				83B8AC1D2594DBF4002347F0 /* LaunchScreen.storyboard */,
 				83B8AC202594DBF4002347F0 /* Info.plist */,
@@ -126,7 +123,6 @@
 			files = (
 				83B8AC1F2594DBF4002347F0 /* LaunchScreen.storyboard in Resources */,
 				83B8AC1C2594DBF4002347F0 /* Assets.xcassets in Resources */,
-				83B8AC1A2594DBF3002347F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,14 +142,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		83B8AC182594DBF3002347F0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83B8AC192594DBF3002347F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		83B8AC1D2594DBF4002347F0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,6 +277,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3798Z36XLV;
 				INFOPLIST_FILE = TikTok/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.asndigital.TikTok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3798Z36XLV;
 				INFOPLIST_FILE = TikTok/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.asndigital.TikTok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
