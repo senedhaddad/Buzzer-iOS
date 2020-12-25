@@ -23,6 +23,8 @@
 		83AD8A52259650A900796D0A /* ExploreHashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A51259650A900796D0A /* ExploreHashtagCollectionViewCell.swift */; };
 		83AD8A5525966E0F00796D0A /* explore.json in Resources */ = {isa = PBXBuildFile; fileRef = 83AD8A5425966E0F00796D0A /* explore.json */; };
 		83AD8A5825966E6400796D0A /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A5725966E6400796D0A /* ExploreManager.swift */; };
+		83AD8A5E25967F2300796D0A /* AuthField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A5D25967F2300796D0A /* AuthField.swift */; };
+		83AD8A6125967F3800796D0A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A6025967F3800796D0A /* AuthButton.swift */; };
 		83B8AC132594DBF3002347F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC122594DBF3002347F0 /* AppDelegate.swift */; };
 		83B8AC152594DBF3002347F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC142594DBF3002347F0 /* SceneDelegate.swift */; };
 		83B8AC172594DBF3002347F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC162594DBF3002347F0 /* HomeViewController.swift */; };
@@ -69,6 +71,8 @@
 		83AD8A51259650A900796D0A /* ExploreHashtagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHashtagCollectionViewCell.swift; sourceTree = "<group>"; };
 		83AD8A5425966E0F00796D0A /* explore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = explore.json; sourceTree = "<group>"; };
 		83AD8A5725966E6400796D0A /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
+		83AD8A5D25967F2300796D0A /* AuthField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthField.swift; sourceTree = "<group>"; };
+		83AD8A6025967F3800796D0A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		83B8AC0F2594DBF3002347F0 /* TikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B8AC122594DBF3002347F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B8AC142594DBF3002347F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 				6795BF0D548D75FED00B8E78 /* Pods_TikTok.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83AD8A5A25967D0600796D0A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				83B8AC432594DF34002347F0 /* SignInViewController.swift */,
+				83B8AC462594DF3C002347F0 /* SignUpViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		83B8AC062594DBF3002347F0 = {
@@ -234,9 +247,8 @@
 		83B8AC322594DED5002347F0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				83AD8A5A25967D0600796D0A /* Authentication */,
 				83B8AC402594DF2A002347F0 /* UserListViewController.swift */,
-				83B8AC432594DF34002347F0 /* SignInViewController.swift */,
-				83B8AC462594DF3C002347F0 /* SignUpViewController.swift */,
 				83B8AC492594DF48002347F0 /* SettingsViewController.swift */,
 				83B8AC512594DF91002347F0 /* PostViewController.swift */,
 				83BC9CF92595136D00889702 /* CommentsViewController.swift */,
@@ -260,6 +272,8 @@
 				83AD8A4B2596509900796D0A /* ExplorePostCollectionViewCell.swift */,
 				83AD8A4E259650A000796D0A /* ExploreUserCollectionViewCell.swift */,
 				83AD8A51259650A900796D0A /* ExploreHashtagCollectionViewCell.swift */,
+				83AD8A5D25967F2300796D0A /* AuthField.swift */,
+				83AD8A6025967F3800796D0A /* AuthButton.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -407,6 +421,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83AD8A6125967F3800796D0A /* AuthButton.swift in Sources */,
+				83AD8A5E25967F2300796D0A /* AuthField.swift in Sources */,
 				83B8AC622594DFF0002347F0 /* HapticsManager.swift in Sources */,
 				83B8AC5C2594DFCB002347F0 /* DatabaseManager.swift in Sources */,
 				83B8AC342594DEEE002347F0 /* ExploreViewController.swift in Sources */,
