@@ -25,6 +25,8 @@
 		83AD8A5825966E6400796D0A /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A5725966E6400796D0A /* ExploreManager.swift */; };
 		83AD8A5E25967F2300796D0A /* AuthField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A5D25967F2300796D0A /* AuthField.swift */; };
 		83AD8A6125967F3800796D0A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A6025967F3800796D0A /* AuthButton.swift */; };
+		83AD8A64259767EB00796D0A /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A63259767EB00796D0A /* RecordButton.swift */; };
+		83AD8A6725976C1800796D0A /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8A6625976C1800796D0A /* CaptionViewController.swift */; };
 		83B8AC132594DBF3002347F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC122594DBF3002347F0 /* AppDelegate.swift */; };
 		83B8AC152594DBF3002347F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC142594DBF3002347F0 /* SceneDelegate.swift */; };
 		83B8AC172594DBF3002347F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8AC162594DBF3002347F0 /* HomeViewController.swift */; };
@@ -73,6 +75,8 @@
 		83AD8A5725966E6400796D0A /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
 		83AD8A5D25967F2300796D0A /* AuthField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthField.swift; sourceTree = "<group>"; };
 		83AD8A6025967F3800796D0A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		83AD8A63259767EB00796D0A /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		83AD8A6625976C1800796D0A /* CaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
 		83B8AC0F2594DBF3002347F0 /* TikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B8AC122594DBF3002347F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B8AC142594DBF3002347F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 				83B8AC492594DF48002347F0 /* SettingsViewController.swift */,
 				83B8AC512594DF91002347F0 /* PostViewController.swift */,
 				83BC9CF92595136D00889702 /* CommentsViewController.swift */,
+				83AD8A6625976C1800796D0A /* CaptionViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				83AD8A51259650A900796D0A /* ExploreHashtagCollectionViewCell.swift */,
 				83AD8A5D25967F2300796D0A /* AuthField.swift */,
 				83AD8A6025967F3800796D0A /* AuthButton.swift */,
+				83AD8A63259767EB00796D0A /* RecordButton.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -437,6 +443,7 @@
 				83B8AC382594DEF9002347F0 /* CameraViewController.swift in Sources */,
 				83AD8A5825966E6400796D0A /* ExploreManager.swift in Sources */,
 				83B8AC4D2594DF5F002347F0 /* TabBarViewController.swift in Sources */,
+				83AD8A6725976C1800796D0A /* CaptionViewController.swift in Sources */,
 				83AD8A40259645ED00796D0A /* ExplorePostViewModel.swift in Sources */,
 				83AD8A37259644F100796D0A /* ExploreCell.swift in Sources */,
 				83BC9CFA2595136D00889702 /* CommentsViewController.swift in Sources */,
@@ -447,6 +454,7 @@
 				83BC9D152595194200889702 /* User.swift in Sources */,
 				83B8AC472594DF3C002347F0 /* SignUpViewController.swift in Sources */,
 				83B8AC5F2594DFDA002347F0 /* AuthenticationManager.swift in Sources */,
+				83AD8A64259767EB00796D0A /* RecordButton.swift in Sources */,
 				83B8AC3B2594DF06002347F0 /* NotificationsViewController.swift in Sources */,
 				83B8AC442594DF34002347F0 /* SignInViewController.swift in Sources */,
 				83BC9D122595191900889702 /* PostComment.swift in Sources */,
