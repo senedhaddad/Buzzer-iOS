@@ -5,6 +5,7 @@
 //  Created by Afraz Siddiqui on 12/24/20.
 //
 
+import Appirater
 import SafariServices
 import UIKit
 
@@ -29,6 +30,28 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 title: "Preferences",
                 options: [
                     SettingsOption(title: "Save Videos", handler: { })
+                ]
+            ),
+            SettingsSection(
+                title: "Enjoying the app?",
+                options: [
+                    SettingsOption(title: "Rate App", handler: {
+                        DispatchQueue.main.async {
+                            // Appirater.tryToShowPrompt()
+                            // UIApplication.shared.open(URL(string: "")!, options: [:], completionHandler: nil)
+                        }
+                    }),
+                    SettingsOption(title: "Share App", handler: { [weak self] in
+                        DispatchQueue.main.async {
+                            guard let url = URL(string: "https://www.facebook.com") else {
+                                return
+                            }
+                            let vc = UIActivityViewController(
+                                activityItems: [url],
+                                applicationActivities: [])
+                            self?.present(vc, animated: true, completion: nil)
+                        }
+                    })
                 ]
             ),
             SettingsSection(
