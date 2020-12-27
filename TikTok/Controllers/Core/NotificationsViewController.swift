@@ -200,21 +200,28 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
 
 extension NotificationsViewController: NotificationsUserFollowTableViewCellDelegate {
     func notificationsUserFollowTableViewCell(_ cell: NotificationsUserFollowTableViewCell, didTapFollowFor username: String) {
-        DatabaseManager.shared.follow(username: username) { success in
+        DatabaseManager.shared.updateRelationship(
+            for: User(
+                username: username,
+                profilePictureURL: nil,
+                identifier: UUID().uuidString
+            ),
+            follow: true
+        ) { success in
             if !success {
-                print("something failed")
+                // something went wrong
             }
         }
     }
 
     func notificationsUserFollowTableViewCell(_ cell: NotificationsUserFollowTableViewCell, didTapAvatarFor username: String) {
+        HapticsManager.shared.vibrateForSelection()
         let vc = ProfileViewController(
             user: User(username: username,
                        profilePictureURL: nil,
                        identifier: "123"))
         vc.title = username.uppercased()
         navigationController?.pushViewController(vc, animated: true)
-       
     }
 }
 
@@ -232,6 +239,7 @@ extension NotificationsViewController: NotificationsPostCommentTableViewCellDele
 
 extension NotificationsViewController {
     func openPost(with identifier: String) {
+        HapticsManager.shared.vibrateForSelection()
         let vc = PostViewController(model: PostModel(identifier: identifier, user: User(
             username: "kanyewest",
             profilePictureURL: nil,

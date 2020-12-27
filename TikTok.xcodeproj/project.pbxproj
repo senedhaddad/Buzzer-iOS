@@ -59,6 +59,10 @@
 		83F9786E2597CE990035DDF7 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9786D2597CE990035DDF7 /* ProfileHeaderViewModel.swift */; };
 		83F9788A2597F12B0035DDF7 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F978892597F12B0035DDF7 /* PostCollectionViewCell.swift */; };
 		83F9788D2598FF140035DDF7 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9788C2598FF140035DDF7 /* EditProfileViewController.swift */; };
+		83F97890259909930035DDF7 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9788F259909930035DDF7 /* SwitchTableViewCell.swift */; };
+		83F9789325990AD80035DDF7 /* SwitchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9789225990AD80035DDF7 /* SwitchCellViewModel.swift */; };
+		83F9789625990CD10035DDF7 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9789525990CD10035DDF7 /* SettingsSection.swift */; };
+		83F9789925990CF20035DDF7 /* SettingsOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9789825990CF10035DDF7 /* SettingsOption.swift */; };
 		F4072BE5DEAAE95EA25A2556 /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6795BF0D548D75FED00B8E78 /* Pods_TikTok.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +123,10 @@
 		83F9786D2597CE990035DDF7 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		83F978892597F12B0035DDF7 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		83F9788C2598FF140035DDF7 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		83F9788F259909930035DDF7 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		83F9789225990AD80035DDF7 /* SwitchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellViewModel.swift; sourceTree = "<group>"; };
+		83F9789525990CD10035DDF7 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		83F9789825990CF10035DDF7 /* SettingsOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOption.swift; sourceTree = "<group>"; };
 		F4F10FB15A47B238146AD338 /* Pods-TikTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.release.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,6 +263,8 @@
 				83AD8A36259644F100796D0A /* ExploreCell.swift */,
 				83AD8A392596451600796D0A /* ExploreSectionType.swift */,
 				83AD8A7F25978B8E00796D0A /* Notifications.swift */,
+				83F9789525990CD10035DDF7 /* SettingsSection.swift */,
+				83F9789825990CF10035DDF7 /* SettingsOption.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +277,7 @@
 				83AD8A422596460B00796D0A /* ExploreHashtagViewModel.swift */,
 				83AD8A452596461D00796D0A /* ExploreUserViewModel.swift */,
 				83F9786D2597CE990035DDF7 /* ProfileHeaderViewModel.swift */,
+				83F9789225990AD80035DDF7 /* SwitchCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -328,6 +339,7 @@
 				83AD8A8E25978EA000796D0A /* Notifications */,
 				83F9786A2597CA4F0035DDF7 /* ProfileHeaderCollectionReusableView.swift */,
 				83F978892597F12B0035DDF7 /* PostCollectionViewCell.swift */,
+				83F9788F259909930035DDF7 /* SwitchTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -484,10 +496,12 @@
 				83B8AC622594DFF0002347F0 /* HapticsManager.swift in Sources */,
 				83B8AC5C2594DFCB002347F0 /* DatabaseManager.swift in Sources */,
 				83B8AC342594DEEE002347F0 /* ExploreViewController.swift in Sources */,
+				83F9789325990AD80035DDF7 /* SwitchCellViewModel.swift in Sources */,
 				83AD8A34259644DF00796D0A /* ExploreSection.swift in Sources */,
 				83BC9D1825951CC000889702 /* CommentTableViewCell.swift in Sources */,
 				83AD8A4F259650A000796D0A /* ExploreUserCollectionViewCell.swift in Sources */,
 				83B8AC412594DF2A002347F0 /* UserListViewController.swift in Sources */,
+				83F9789925990CF20035DDF7 /* SettingsOption.swift in Sources */,
 				83B8AC4A2594DF48002347F0 /* SettingsViewController.swift in Sources */,
 				83AD8A432596460B00796D0A /* ExploreHashtagViewModel.swift in Sources */,
 				83B8AC522594DF91002347F0 /* PostViewController.swift in Sources */,
@@ -516,11 +530,13 @@
 				83BC9D122595191900889702 /* PostComment.swift in Sources */,
 				839B02E02594F5C100B7BAD5 /* Extensions.swift in Sources */,
 				839B02E42594F8DE00B7BAD5 /* PostModel.swift in Sources */,
+				83F97890259909930035DDF7 /* SwitchTableViewCell.swift in Sources */,
 				83AD8A4C2596509900796D0A /* ExplorePostCollectionViewCell.swift in Sources */,
 				83B8AC3E2594DF13002347F0 /* ProfileViewController.swift in Sources */,
 				83B8AC592594DFBA002347F0 /* StorageManager.swift in Sources */,
 				83B8AC132594DBF3002347F0 /* AppDelegate.swift in Sources */,
 				83B8AC152594DBF3002347F0 /* SceneDelegate.swift in Sources */,
+				83F9789625990CD10035DDF7 /* SettingsSection.swift in Sources */,
 				83AD8A3A2596451600796D0A /* ExploreSectionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
