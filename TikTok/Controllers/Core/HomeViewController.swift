@@ -183,8 +183,7 @@ extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x == 0 || scrollView.contentOffset.x <= (view.width/2) {
             control.selectedSegmentIndex = 0
-        }
-        else if scrollView.contentOffset.x > (view.width/2) {
+        } else if scrollView.contentOffset.x > (view.width/2) {
             control.selectedSegmentIndex = 1
         }
     }
@@ -196,8 +195,7 @@ extension HomeViewController: PostViewControllerDelegate {
         if horizontalScrollView.contentOffset.x == 0 {
             // follwoing
             followingnPageViewController.dataSource = nil
-        }
-        else {
+        } else {
             forYouPageViewController.dataSource = nil
         }
 

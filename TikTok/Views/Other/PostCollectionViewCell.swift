@@ -51,8 +51,7 @@ class PostCollectionViewCell: UICollectionViewCell {
                     do {
                         let cgImage = try generator.copyCGImage(at: .zero, actualTime: nil)
                         self.imageView.image = UIImage(cgImage: cgImage)
-                    }
-                    catch {
+                    } catch {
 
                     }
                 case .failure(let error):
@@ -60,7 +59,6 @@ class PostCollectionViewCell: UICollectionViewCell {
                 }
             }
         }
-
 
     }
 }

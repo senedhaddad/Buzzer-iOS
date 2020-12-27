@@ -58,8 +58,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         if users.isEmpty {
             view.addSubview(noUsersLabel)
             noUsersLabel.sizeToFit()
-        }
-        else {
+        } else {
             view.addSubview(tableView)
             tableView.delegate = self
             tableView.dataSource = self
@@ -70,8 +69,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLayoutSubviews()
         if tableView.superview == view {
             tableView.frame = view.bounds
-        }
-        else {
+        } else {
             noUsersLabel.center = view.center
         }
     }

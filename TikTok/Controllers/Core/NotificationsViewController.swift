@@ -100,8 +100,7 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         if notifications.isEmpty {
             noNotificationsLabel.isHidden = false
             tableView.isHidden = true
-        }
-        else {
+        } else {
             noNotificationsLabel.isHidden = true
             tableView.isHidden = false
         }

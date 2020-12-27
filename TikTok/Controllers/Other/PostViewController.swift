@@ -139,7 +139,7 @@ class PostViewController: UIViewController {
     private func configureVideo() {
         StorageManager.shared.getDownloadURL(for: model) { [weak self] result in
             DispatchQueue.main.async {
-                guard let strongSelf = self else{
+                guard let strongSelf = self else {
                     return
                 }
 

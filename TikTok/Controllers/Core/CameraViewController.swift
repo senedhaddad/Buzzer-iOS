@@ -70,16 +70,14 @@ class CameraViewController: UIViewController {
             recordButton.toggle(for: .notRecording)
             captureOutput.stopRecording()
             HapticsManager.shared.vibrateForSelection()
-        }
-        else {
+        } else {
             guard var url = FileManager.default.urls(
                 for: .documentDirectory,
                 in: .userDomainMask
-            ).first else{
+            ).first else {
                 return
             }
             HapticsManager.shared.vibrateForSelection()
-
 
             url.appendPathComponent("video.mov")
 
@@ -98,8 +96,7 @@ class CameraViewController: UIViewController {
         if previewLayer != nil {
             previewLayer?.removeFromSuperlayer()
             previewLayer = nil
-        }
-        else {
+        } else {
             captureSession.stopRunning()
             tabBarController?.tabBar.isHidden = false
             tabBarController?.selectedIndex = 0
@@ -128,7 +125,7 @@ class CameraViewController: UIViewController {
         // update session
         captureSession.sessionPreset = .hd1280x720
         if captureSession.canAddOutput(captureOutput) {
-            
+
             captureSession.addOutput(captureOutput)
         }
 
@@ -182,7 +179,7 @@ extension CameraViewController: AVCaptureFileOutputRecordingDelegate {
             return
         }
         HapticsManager.shared.vibrateForSelection()
-        
+
         // Push caption controller
         let vc = CaptionViewController(videoURL: url)
         navigationController?.pushViewController(vc, animated: true)

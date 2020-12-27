@@ -60,7 +60,6 @@ class NotificationsPostCommentTableViewCell: UITableViewCell {
                                                         didTapPostWith: id)
     }
 
-
     required init?(coder: NSCoder) {
         fatalError()
     }

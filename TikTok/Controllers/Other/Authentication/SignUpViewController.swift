@@ -124,8 +124,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 if success {
                     HapticsManager.shared.vibrate(for: .success)
                     self?.dismiss(animated: true, completion: nil)
-                }
-                else {
+                } else {
                     HapticsManager.shared.vibrate(for: .error)
                     let alert = UIAlertController(
                         title: "Sign Up Failed",

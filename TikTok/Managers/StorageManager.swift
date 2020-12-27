@@ -54,8 +54,7 @@ final class StorageManager {
         storageBucket.child(path).putData(imageData, metadata: nil) { _, error in
             if let error = error {
                 completion(.failure(error))
-            }
-            else {
+            } else {
                 self.storageBucket.child(path).downloadURL { url, error in
                     guard let url = url else {
                         if let error = error {
@@ -88,8 +87,7 @@ final class StorageManager {
         storageBucket.child(post.videoChildPath).downloadURL { url, error in
             if let error = error {
                 completion(.failure(error))
-            }
-            else if let url = url {
+            } else if let url = url {
                 completion(.success(url))
             }
         }

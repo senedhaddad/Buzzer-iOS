@@ -271,7 +271,7 @@ public class ProgressHUD: UIView {
 	static let shared: ProgressHUD = {
 		let instance = ProgressHUD()
 		return instance
-	} ()
+	}()
 
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	convenience private init() {
@@ -311,7 +311,7 @@ public class ProgressHUD: UIView {
 
 		hudShow()
 
-		if (hide) {
+		if hide {
 			let text = labelStatus?.text ?? ""
 			let delay = Double(text.count) * 0.03 + 1.25
 			timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { _ in
@@ -323,7 +323,7 @@ public class ProgressHUD: UIView {
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	private func setupNotifications() {
 
-		if (viewBackground == nil) {
+		if viewBackground == nil {
 			NotificationCenter.default.addObserver(self, selector: #selector(setupPosition(_:)), name: keyboardWillShow, object: nil)
 			NotificationCenter.default.addObserver(self, selector: #selector(setupPosition(_:)), name: keyboardWillHide, object: nil)
 			NotificationCenter.default.addObserver(self, selector: #selector(setupPosition(_:)), name: keyboardDidShow, object: nil)
@@ -335,7 +335,7 @@ public class ProgressHUD: UIView {
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	private func setupBackground(_ interaction: Bool) {
 
-		if (viewBackground == nil) {
+		if viewBackground == nil {
 			let mainWindow = UIApplication.shared.windows.first ?? UIWindow()
 			viewBackground = UIView(frame: self.bounds)
 			mainWindow.addSubview(viewBackground!)
@@ -348,7 +348,7 @@ public class ProgressHUD: UIView {
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	private func setupToolbar() {
 
-		if (toolbarHUD == nil) {
+		if toolbarHUD == nil {
 			toolbarHUD = UIToolbar(frame: CGRect.zero)
 			toolbarHUD?.isTranslucent = true
 			toolbarHUD?.clipsToBounds = true
@@ -363,7 +363,7 @@ public class ProgressHUD: UIView {
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	private func setupLabel(_ status: String?) {
 
-		if (labelStatus == nil) {
+		if labelStatus == nil {
 			labelStatus = UILabel()
 			labelStatus?.textAlignment = .center
 			labelStatus?.baselineAdjustment = .alignCenters
@@ -384,12 +384,12 @@ public class ProgressHUD: UIView {
 		viewAnimatedIcon?.removeFromSuperview()
 		staticImageView?.removeFromSuperview()
 
-		if (viewProgress == nil) {
+		if viewProgress == nil {
 			viewProgress = ProgressView(colorProgress)
 			viewProgress?.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
 		}
 
-		if (viewProgress?.superview == nil) {
+		if viewProgress?.superview == nil {
 			toolbarHUD?.addSubview(viewProgress!)
 		}
 
@@ -403,11 +403,11 @@ public class ProgressHUD: UIView {
 		viewAnimatedIcon?.removeFromSuperview()
 		staticImageView?.removeFromSuperview()
 
-		if (viewAnimation == nil) {
+		if viewAnimation == nil {
 			viewAnimation = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
 		}
 
-		if (viewAnimation?.superview == nil) {
+		if viewAnimation?.superview == nil {
 			toolbarHUD?.addSubview(viewAnimation!)
 		}
 
@@ -419,17 +419,17 @@ public class ProgressHUD: UIView {
 			$0.removeFromSuperlayer()
 		}
 
-		if (animationType == .systemActivityIndicator)		{ animationSystemActivityIndicator(viewAnimation!)		}
-		if (animationType == .horizontalCirclesPulse)		{ animationHorizontalCirclesPulse(viewAnimation!)		}
-		if (animationType == .lineScaling)					{ animationLineScaling(viewAnimation!)					}
-		if (animationType == .singleCirclePulse)			{ animationSingleCirclePulse(viewAnimation!)			}
-		if (animationType == .multipleCirclePulse)			{ animationMultipleCirclePulse(viewAnimation!)			}
-		if (animationType == .singleCircleScaleRipple)		{ animationSingleCircleScaleRipple(viewAnimation!)		}
-		if (animationType == .multipleCircleScaleRipple)	{ animationMultipleCircleScaleRipple(viewAnimation!)	}
-		if (animationType == .circleSpinFade)				{ animationCircleSpinFade(viewAnimation!)				}
-		if (animationType == .lineSpinFade)					{ animationLineSpinFade(viewAnimation!)					}
-		if (animationType == .circleRotateChase)			{ animationCircleRotateChase(viewAnimation!)			}
-		if (animationType == .circleStrokeSpin)				{ animationCircleStrokeSpin(viewAnimation!)				}
+		if animationType == .systemActivityIndicator { animationSystemActivityIndicator(viewAnimation!)		}
+		if animationType == .horizontalCirclesPulse { animationHorizontalCirclesPulse(viewAnimation!)		}
+		if animationType == .lineScaling { animationLineScaling(viewAnimation!)					}
+		if animationType == .singleCirclePulse { animationSingleCirclePulse(viewAnimation!)			}
+		if animationType == .multipleCirclePulse { animationMultipleCirclePulse(viewAnimation!)			}
+		if animationType == .singleCircleScaleRipple { animationSingleCircleScaleRipple(viewAnimation!)		}
+		if animationType == .multipleCircleScaleRipple { animationMultipleCircleScaleRipple(viewAnimation!)	}
+		if animationType == .circleSpinFade { animationCircleSpinFade(viewAnimation!)				}
+		if animationType == .lineSpinFade { animationLineSpinFade(viewAnimation!)					}
+		if animationType == .circleRotateChase { animationCircleRotateChase(viewAnimation!)			}
+		if animationType == .circleStrokeSpin { animationCircleStrokeSpin(viewAnimation!)				}
 	}
 
 	//---------------------------------------------------------------------------------------------------------------------------------------------
@@ -439,11 +439,11 @@ public class ProgressHUD: UIView {
 		viewAnimation?.removeFromSuperview()
 		staticImageView?.removeFromSuperview()
 
-		if (viewAnimatedIcon == nil) {
+		if viewAnimatedIcon == nil {
 			viewAnimatedIcon = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
 		}
 
-		if (viewAnimatedIcon?.superview == nil) {
+		if viewAnimatedIcon?.superview == nil {
 			toolbarHUD?.addSubview(viewAnimatedIcon!)
 		}
 
@@ -451,9 +451,9 @@ public class ProgressHUD: UIView {
 			$0.removeFromSuperlayer()
 		}
 
-		if (animatedIcon == .succeed)	{ animatedIconSucceed(viewAnimatedIcon!)	}
-		if (animatedIcon == .failed)	{ animatedIconFailed(viewAnimatedIcon!)		}
-		if (animatedIcon == .added)		{ animatedIconAdded(viewAnimatedIcon!)		}
+		if animatedIcon == .succeed { animatedIconSucceed(viewAnimatedIcon!)	}
+		if animatedIcon == .failed { animatedIconFailed(viewAnimatedIcon!)		}
+		if animatedIcon == .added { animatedIconAdded(viewAnimatedIcon!)		}
 	}
 
 	//---------------------------------------------------------------------------------------------------------------------------------------------
@@ -463,11 +463,11 @@ public class ProgressHUD: UIView {
 		viewAnimation?.removeFromSuperview()
 		viewAnimatedIcon?.removeFromSuperview()
 
-		if (staticImageView == nil) {
+		if staticImageView == nil {
 			staticImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
 		}
 
-		if (staticImageView?.superview == nil) {
+		if staticImageView?.superview == nil {
 			toolbarHUD?.addSubview(staticImageView!)
 		}
 
@@ -490,7 +490,7 @@ public class ProgressHUD: UIView {
 			width = ceil(rectLabel.size.width) + 60
 			height = ceil(rectLabel.size.height) + 120
 
-			if (width < 120) { width = 120 }
+			if width < 120 { width = 120 }
 
 			rectLabel.origin.x = (width - rectLabel.size.width) / 2
 			rectLabel.origin.y = (height - rectLabel.size.height) / 2 + 45
@@ -503,7 +503,7 @@ public class ProgressHUD: UIView {
 		let centerX = width/2
 		var centerY = height/2
 
-		if (labelStatus?.text != nil) { centerY = 55 }
+		if labelStatus?.text != nil { centerY = 55 }
 
 		viewProgress?.center = CGPoint(x: centerX, y: centerY)
 		viewAnimation?.center = CGPoint(x: centerX, y: centerY)
@@ -572,7 +572,7 @@ public class ProgressHUD: UIView {
 		timer?.invalidate()
 		timer = nil
 
-		if (self.alpha != 1) {
+		if self.alpha != 1 {
 			self.alpha = 1
 			toolbarHUD?.alpha = 0
 			toolbarHUD?.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
@@ -587,11 +587,11 @@ public class ProgressHUD: UIView {
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	private func hudHide() {
 
-		if (self.alpha == 1) {
+		if self.alpha == 1 {
 			UIView.animate(withDuration: 0.15, delay: 0, options: [.allowUserInteraction, .curveEaseIn], animations: {
 				self.toolbarHUD?.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
 				self.toolbarHUD?.alpha = 0
-			}, completion: { isFinished in
+			}, completion: { _ in
 				self.hudDestroy()
 				self.alpha = 0
 			})

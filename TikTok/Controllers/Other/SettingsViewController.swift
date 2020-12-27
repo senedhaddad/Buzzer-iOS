@@ -95,8 +95,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
 
                         self?.navigationController?.popToRootViewController(animated: true)
                         self?.tabBarController?.selectedIndex = 0
-                    }
-                    else {
+                    } else {
                         // failed
                         let alert = UIAlertController(title: "Woops",
                                                       message: "Something went wrong when signing out. Please try again.",

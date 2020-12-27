@@ -49,8 +49,7 @@ class AuthField: UITextField {
         if type == .password {
             textContentType = .oneTimeCode
             isSecureTextEntry = true
-        }
-        else if type == .email {
+        } else if type == .email {
             keyboardType = .emailAddress
             textContentType = .emailAddress
         }

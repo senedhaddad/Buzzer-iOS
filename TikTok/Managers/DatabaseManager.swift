@@ -36,7 +36,7 @@ final class DatabaseManager {
                         ]
                     ]
                 ) { error, _ in
-                    guard error == nil else{
+                    guard error == nil else {
                         completion(false)
                         return
                     }
@@ -48,7 +48,7 @@ final class DatabaseManager {
             usersDictionary[username] = ["email": email]
             // save new users object
             self?.database.child("users").setValue(usersDictionary, withCompletionBlock: { error, _ in
-                guard error == nil else{
+                guard error == nil else {
                     completion(false)
                     return
                 }
@@ -103,17 +103,16 @@ final class DatabaseManager {
                 posts.append(newEntry)
                 value["posts"] = posts
                 self?.database.child("users").child(username).setValue(value) { error, _ in
-                    guard error == nil else{
+                    guard error == nil else {
                         completion(false)
                         return
                     }
                     completion(true)
                 }
-            }
-            else {
+            } else {
                 value["posts"] = [newEntry]
                 self?.database.child("users").child(username).setValue(value) { error, _ in
-                    guard error == nil else{
+                    guard error == nil else {
                         completion(false)
                         return
                     }
@@ -235,8 +234,7 @@ final class DatabaseManager {
                     self.database.child(path).setValue(current) { error, _ in
                         completion(error == nil)
                     }
-                }
-                else {
+                } else {
                     self.database.child(path).setValue([usernameToInsert]) { error, _ in
                         completion(error == nil)
                     }
@@ -252,15 +250,13 @@ final class DatabaseManager {
                     self.database.child(path2).setValue(current) { error, _ in
                         completion(error == nil)
                     }
-                }
-                else {
+                } else {
                     self.database.child(path2).setValue([usernameToInsert]) { error, _ in
                         completion(error == nil)
                     }
                 }
             }
-        }
-        else {
+        } else {
             // unfollow
 
             // Remove from current user following

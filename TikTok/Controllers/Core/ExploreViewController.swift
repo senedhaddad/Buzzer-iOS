@@ -51,7 +51,6 @@ class ExploreViewController: UIViewController {
             )
         )
 
-
         // Trending posts
         sections.append(
             ExploreSection(

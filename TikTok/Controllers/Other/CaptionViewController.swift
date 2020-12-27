@@ -71,8 +71,7 @@ class CaptionViewController: UIViewController {
                             self?.navigationController?.popToRootViewController(animated: true)
                             self?.tabBarController?.selectedIndex = 0
                             self?.tabBarController?.tabBar.isHidden = false
-                        }
-                        else {
+                        } else {
                             HapticsManager.shared.vibrate(for: .error)
                             ProgressHUD.dismiss()
                             let alert = UIAlertController(title: "Woops",
@@ -82,8 +81,7 @@ class CaptionViewController: UIViewController {
                             self?.present(alert, animated: true)
                         }
                     }
-                }
-                else {
+                } else {
                     HapticsManager.shared.vibrate(for: .error)
                     ProgressHUD.dismiss()
                     let alert = UIAlertController(title: "Woops",

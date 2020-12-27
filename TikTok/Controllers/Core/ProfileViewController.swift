@@ -46,7 +46,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     private var following = [String]()
     private var isFollower: Bool = false
 
-    // MARK - Init
+    // MARK: - Init
 
     init(user: User) {
         self.user = user
@@ -207,8 +207,7 @@ extension ProfileViewController: ProfileHeaderCollectionReusableViewDelegate {
             let vc = EditProfileViewController()
             let navVC = UINavigationController(rootViewController: vc)
             present(navVC, animated: true)
-        }
-        else {
+        } else {
             // Follow or unfolow current users profile that we are viewing
             if self.isFollower {
                 // Unfollow
@@ -218,13 +217,11 @@ extension ProfileViewController: ProfileHeaderCollectionReusableViewDelegate {
                             self?.isFollower = false
                             self?.collectionView.reloadData()
                         }
-                    }
-                    else {
+                    } else {
 
                     }
                 }
-            }
-            else {
+            } else {
                 // Follow
                 DatabaseManager.shared.updateRelationship(for: user, follow: true) { [weak self] success in
                     if success {
@@ -232,8 +229,7 @@ extension ProfileViewController: ProfileHeaderCollectionReusableViewDelegate {
                             self?.isFollower = true
                             self?.collectionView.reloadData()
                         }
-                    }
-                    else {
+                    } else {
 
                     }
                 }
@@ -294,7 +290,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         picker.dismiss(animated: true, completion: nil)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
             return
@@ -303,7 +299,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         ProgressHUD.show("Uploading")
         StorageManager.shared.uploadProfilePicture(with: image) { [weak self] result in
             DispatchQueue.main.async {
-                guard let strongSelf = self else{
+                guard let strongSelf = self else {
                     return
                 }
                 switch result {

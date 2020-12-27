@@ -56,7 +56,6 @@ class CommentTableViewCell: UITableViewCell {
         let imageSize: CGFloat = 44
         avatarImageView.frame = CGRect(x: 10, y: 5, width: imageSize, height: imageSize)
 
-
         let commentLabelHeight = min(contentView.height - dateLabel.top, commentLabel.height)
         commentLabel.frame = CGRect(
             x: avatarImageView.right+10,
@@ -85,8 +84,7 @@ class CommentTableViewCell: UITableViewCell {
         dateLabel.text = .date(with: model.date)
         if let url = model.user.profilePictureURL {
             print(url)
-        }
-        else {
+        } else {
             avatarImageView.image = UIImage(systemName: "person.circle")
         }
     }

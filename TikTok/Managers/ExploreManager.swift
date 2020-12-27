@@ -189,7 +189,6 @@ final class ExploreManager {
 
     // MARK: - Private
 
-
     /// Parse explore JSON data
     /// - Returns: Returns a optional response model
     private func parseExploreData() -> ExploreResponse? {
@@ -204,8 +203,7 @@ final class ExploreManager {
                 ExploreResponse.self,
                 from: data
             )
-        }
-        catch {
+        } catch {
             print(error)
             return nil
         }
