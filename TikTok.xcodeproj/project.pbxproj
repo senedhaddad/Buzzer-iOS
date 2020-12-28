@@ -196,6 +196,20 @@
 			path = TikTokTests;
 			sourceTree = "<group>";
 		};
+		8331E289259959A700E6BBC6 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				83AD8A36259644F100796D0A /* ExploreCell.swift */,
+				83AD8A392596451600796D0A /* ExploreSectionType.swift */,
+				8331E2522599440C00E6BBC6 /* ExploreResponse.swift */,
+				8331E2552599442700E6BBC6 /* Banner.swift */,
+				8331E2582599443C00E6BBC6 /* Post.swift */,
+				8331E25B2599444C00E6BBC6 /* Hashtag.swift */,
+				8331E25E2599445D00E6BBC6 /* Creator.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		83AD8A5A25967D0600796D0A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,16 +322,10 @@
 				83BC9D112595191900889702 /* PostComment.swift */,
 				83BC9D142595194200889702 /* User.swift */,
 				83AD8A33259644DF00796D0A /* ExploreSection.swift */,
-				83AD8A36259644F100796D0A /* ExploreCell.swift */,
-				83AD8A392596451600796D0A /* ExploreSectionType.swift */,
 				83AD8A7F25978B8E00796D0A /* Notifications.swift */,
 				83F9789525990CD10035DDF7 /* SettingsSection.swift */,
 				83F9789825990CF10035DDF7 /* SettingsOption.swift */,
-				8331E2522599440C00E6BBC6 /* ExploreResponse.swift */,
-				8331E2552599442700E6BBC6 /* Banner.swift */,
-				8331E2582599443C00E6BBC6 /* Post.swift */,
-				8331E25B2599444C00E6BBC6 /* Hashtag.swift */,
-				8331E25E2599445D00E6BBC6 /* Creator.swift */,
+				8331E289259959A700E6BBC6 /* Explore */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,12 +393,12 @@
 		83B8AC502594DF77002347F0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				83BC9D1725951CC000889702 /* CommentTableViewCell.swift */,
+				83AD8A8E25978EA000796D0A /* Notifications */,
 				83AD8A8625978E6300796D0A /* Explore */,
 				83AD8A8525978E5B00796D0A /* Auth */,
 				83AD8A63259767EB00796D0A /* RecordButton.swift */,
-				83AD8A8E25978EA000796D0A /* Notifications */,
 				83F9786A2597CA4F0035DDF7 /* ProfileHeaderCollectionReusableView.swift */,
+				83BC9D1725951CC000889702 /* CommentTableViewCell.swift */,
 				83F978892597F12B0035DDF7 /* PostCollectionViewCell.swift */,
 				83F9788F259909930035DDF7 /* SwitchTableViewCell.swift */,
 			);
