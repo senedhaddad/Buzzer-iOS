@@ -1,6 +1,6 @@
 platform :ios, '13.0'
 
-target 'TikTok' do
+target 'Buzzer' do
   use_frameworks!
 
   pod 'Firebase/Core'
@@ -16,7 +16,7 @@ target 'TikTok' do
 
 end
 
-target 'TikTokTests' do
+target 'BuzzerTests' do
   use_frameworks!
 
   pod 'Firebase/Core'
