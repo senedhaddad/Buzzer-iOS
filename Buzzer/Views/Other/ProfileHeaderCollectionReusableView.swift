@@ -43,7 +43,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         button.setTitleColor(.label, for: .normal)
         button.layer.masksToBounds = true
         button.setTitle("Follow", for: .normal)
-        button.backgroundColor = .systemPink
+        button.backgroundColor = UIColor(hex: "#EABC49ff")
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         return button
     }()

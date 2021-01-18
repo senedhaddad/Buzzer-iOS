@@ -40,6 +40,7 @@ class TabBarViewController: UITabBarController {
         let home = HomeViewController()
         let explore = ExploreViewController()
         let camera = CameraViewController()
+        // TODO: change notifications to "Leaders" / contest screen
         let notifications = NotificationsViewController()
 
         var urlString: String?
@@ -59,8 +60,8 @@ class TabBarViewController: UITabBarController {
         profile.title = "Profile"
 
         let nav1 = UINavigationController(rootViewController: home)
-        let nav2 = UINavigationController(rootViewController: explore)
-        let nav3 = UINavigationController(rootViewController: notifications)
+        let nav2 = UINavigationController(rootViewController: notifications)
+        let nav3 = UINavigationController(rootViewController: explore)
         let nav4 = UINavigationController(rootViewController: profile)
         let cameraNav = UINavigationController(rootViewController: camera)
 
@@ -75,12 +76,12 @@ class TabBarViewController: UITabBarController {
 
         nav3.navigationBar.tintColor = .label
         
-        nav1.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), tag: 1)
+        nav1.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house.fill"), tag: 1)
         
         nav2.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "star.fill"), tag: 2)
-        camera.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "camera"), tag: 3)
-        nav3.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "bell"), tag: 4)
-        nav4.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.circle"), tag: 5)
+        camera.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "plus"), tag: 3)
+        nav3.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 4)
+        nav4.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.fill"), tag: 5)
 
         if #available(iOS 14.0, *) {
             nav1.navigationItem.backButtonDisplayMode = .minimal
@@ -91,6 +92,11 @@ class TabBarViewController: UITabBarController {
         }
 
         nav4.navigationBar.tintColor = .label
+        
+//        tabBar.tintColor =
+        tabBar.tintColor = UIColor(hex: "#EABC49ff")
+        UITabBar.appearance().unselectedItemTintColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor.black
 
         setViewControllers([nav1, nav2, cameraNav, nav3, nav4], animated: false)
     }

@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     }()
 
     let control: UISegmentedControl = {
-        let titles = ["Following", "For You"]
+        let titles = ["For You", "Contest"] // TODO: was previously ["Following", "For You"]
         let control = UISegmentedControl(items: titles)
         control.selectedSegmentIndex = 1
         control.backgroundColor = nil

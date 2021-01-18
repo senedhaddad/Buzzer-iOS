@@ -21,7 +21,7 @@ class PostViewController: UIViewController {
 
     private let likeButton: UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
+        button.setBackgroundImage(UIImage(systemName: "star.fill"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.tintColor = .white
         return button
@@ -29,7 +29,7 @@ class PostViewController: UIViewController {
 
     private let commentButton: UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(UIImage(systemName: "text.bubble.fill"), for: .normal)
+        button.setBackgroundImage(UIImage(systemName: "text.bubble"), for: .normal)
         button.tintColor = .white
         button.imageView?.contentMode = .scaleAspectFit
         return button

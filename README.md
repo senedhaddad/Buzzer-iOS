@@ -1,6 +1,6 @@
-# TikTook App in Swift
+# Buzzer App in Swift
 
-This is the source code repo for the tiktok app that we built in swift.
+This is the source code repo for the Buzzer app built in Swift.
 
 ## Features
 - Feed
