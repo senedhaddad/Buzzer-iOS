@@ -1,8 +1,8 @@
 //
 //  ExploreResponse.swift
-//  TikTok
+//  Buzzer
 //
-//  Created by Afraz Siddiqui on 12/27/20.
+//  Created by Sened Haddad on 12/27/20.
 //
 
 import Foundation

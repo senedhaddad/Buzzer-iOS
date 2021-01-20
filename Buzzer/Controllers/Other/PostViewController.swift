@@ -1,8 +1,8 @@
 //
 //  PostViewController.swift
-//  TikTok
+//  Buzzer
 //
-//  Created by Afraz Siddiqui on 12/24/20.
+//  Created by Sened Haddad on 12/24/20.
 //
 
 import AVFoundation
@@ -112,7 +112,7 @@ class PostViewController: UIViewController {
         videoView.frame = view.bounds
         spinner.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         spinner.center = videoView.center
-        let size: CGFloat = 40
+        let size: CGFloat = 55
         let yStart: CGFloat = view.height - (size * 4.0) - 30 - view.safeAreaInsets.bottom
         for (index, button ) in [likeButton, commentButton, shareButton].enumerated() {
             button.frame = CGRect(x: view.width-size-10, y: yStart + (CGFloat(index) * 10) + (CGFloat(index) * size), width: size, height: size)
@@ -213,7 +213,7 @@ class PostViewController: UIViewController {
     }
 
     @objc private func didTapShare() {
-        guard let url = URL(string: "https://www.tiktok.com") else {
+        guard let url = URL(string: "https://www.buzzer.com") else {
             return
         }
 

@@ -1,8 +1,8 @@
 //
 //  SignInViewController.swift
-//  TikTok
+//  Buzzer
 //
-//  Created by Afraz Siddiqui on 12/24/20.
+//  Created by Sened Haddad on 12/24/20.
 //
 
 import SafariServices
@@ -139,7 +139,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     @objc func didTapForgotPassword() {
         didTapKeyboardDone()
-        guard let url = URL(string: "https://www.tiktok.com/forgot-password") else {
+        guard let url = URL(string: "https://www.buzzer.com/forgot-password") else {
             return
         }
         let vc = SFSafariViewController(url: url)

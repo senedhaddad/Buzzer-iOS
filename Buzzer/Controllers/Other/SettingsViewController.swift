@@ -1,8 +1,8 @@
 //
 //  SettingsViewController.swift
-//  TikTok
+//  Buzzer
 //
-//  Created by Afraz Siddiqui on 12/24/20.
+//  Created by Sened Haddad on 12/24/20.
 //
 
 import Appirater
@@ -59,7 +59,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 options: [
                     SettingsOption(title: "Terms of Service", handler: { [weak self] in
                         DispatchQueue.main.async {
-                            guard let url = URL(string: "https://www.tiktok.com/legal/terms-of-use") else {
+                            guard let url = URL(string: "https://www.buzzer.com/legal/terms-of-use") else {
                                 return
                             }
                             let vc = SFSafariViewController(url: url)
@@ -68,7 +68,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                     }),
                     SettingsOption(title: "Privacy Policy", handler: { [weak self] in
                         DispatchQueue.main.async {
-                            guard let url = URL(string: "https://www.tiktok.com/legal/privacy-policy") else {
+                            guard let url = URL(string: "https://www.buzzer.com/legal/privacy-policy") else {
                                 return
                             }
                             let vc = SFSafariViewController(url: url)

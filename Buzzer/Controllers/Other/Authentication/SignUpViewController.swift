@@ -1,8 +1,8 @@
 //
 //  SignUpViewController.swift
-//  TikTok
+//  Buzzer
 //
-//  Created by Afraz Siddiqui on 12/24/20.
+//  Created by Sened Haddad on 12/24/20.
 //
 
 import SafariServices
@@ -140,7 +140,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @objc func didTapTerms() {
         didTapKeyboardDone()
-        guard let url = URL(string: "https://www.tiktok.com/terms") else {
+        guard let url = URL(string: "https://www.buzzer.com/terms") else {
             return
         }
         let vc = SFSafariViewController(url: url)

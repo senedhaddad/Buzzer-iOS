@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  TikTok
+//  Buzzer
 //
-//  Created by Afraz Siddiqui on 12/24/20.
+//  Created by Sened Haddad on 12/24/20.
 //
 
 import UIKit
@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         let control = UISegmentedControl(items: titles)
         control.selectedSegmentIndex = 1
         control.backgroundColor = nil
-        control.selectedSegmentTintColor = .white
+        control.selectedSegmentTintColor = nil // .white
         return control
     }()
 
@@ -174,7 +174,7 @@ extension HomeViewController: UIPageViewControllerDataSource {
             return followingPosts
         }
 
-        // For Yuo
+        // For You
         return forYouPosts
     }
 }
@@ -193,7 +193,7 @@ extension HomeViewController: PostViewControllerDelegate {
     func postViewController(_ vc: PostViewController, didTapCommentButtoonFor post: PostModel) {
         horizontalScrollView.isScrollEnabled = false
         if horizontalScrollView.contentOffset.x == 0 {
-            // follwoing
+            // following
             followingnPageViewController.dataSource = nil
         } else {
             forYouPageViewController.dataSource = nil

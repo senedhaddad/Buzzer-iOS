@@ -1,8 +1,8 @@
 //
 //  ExploreBannerCollectionViewCell.swift
-//  TikTok
+//  Buzzer
 //
-//  Created by Afraz Siddiqui on 12/25/20.
+//  Created by Sened Haddad on 12/25/20.
 //
 
 import UIKit
