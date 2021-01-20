@@ -1,6 +1,7 @@
 # Buzzer App in Swift
 
 This is the source code repo for the Buzzer app built in Swift.
+<<<<<<< HEAD
 
 ## Features
 - Feed
@@ -9,3 +10,5 @@ This is the source code repo for the Buzzer app built in Swift.
 - Notifications
 - Profiles
 - More...
+=======
+>>>>>>> bd010830dbbe04f2320f3d6c60289703e20ba86c
