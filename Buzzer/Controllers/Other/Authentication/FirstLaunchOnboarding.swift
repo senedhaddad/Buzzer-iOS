@@ -1,15 +1,15 @@
 //
-//  SignInViewController.swift
+//  FirstLaunchOnboarding.swift
 //  Buzzer
 //
-//  Created by Sened Haddad on 12/24/20.
+//  Created by Sened Haddad on 1/20/21.
 //
 
 import SafariServices
 import UIKit
 
-class SignInViewController: UIViewController, UITextFieldDelegate {
-
+class FirstLaunchOnboarding: UIViewController, UITextFieldDelegate {
+    
     public var completion: (() -> Void)?
 
     private let logoImageView: UIImageView = {
@@ -27,7 +27,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     private let signInButton = AuthButton(type: .signIn, title: "Sign In")
     private let forgotPassword = AuthButton(type: .plain, title: "Forgot Password")
-    private let signUpButton = AuthButton(type: .plain, title: "New User? Create Account")
+    private let signUpButton = AuthButton(type: .signUp, title: "New User? Create Account")
     private let skipButton = AuthButton(type: .plain, title: "Skip for now @ZFellows")
 
     // MARK: - Lifecycle

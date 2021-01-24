@@ -111,7 +111,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
             let alert = UIAlertController(
                 title: "Woops",
-                message: "Please make sure to enter a valid username, email, and password. Your password must be atleast 6 characters long",
+                message: "Please make sure to enter a valid username, email, and password. Your password must be at least 6 characters long",
                 preferredStyle: .alert
             )
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
@@ -128,7 +128,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     HapticsManager.shared.vibrate(for: .error)
                     let alert = UIAlertController(
                         title: "Sign Up Failed",
-                        message: "Something went wrong when trying to register. Pleaes try again.",
+                        message: "Something went wrong when trying to register. Please try again.",
                         preferredStyle: .alert
                     )
                     alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
